@@ -12,6 +12,10 @@ server.use(express.json())
 
 server.use('/api/posts', postsRouter)
 
+server.get('/'), (req, res) => {
+    res.send('hello :)')
+}
+
 server.get('/api/posts/:id', (req, res) => {
     const id = req.params.id
 
