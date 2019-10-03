@@ -1,6 +1,8 @@
+require('dotenv').config()
+
 const express = require('express')
 
-const port = 4000
+const port = process.env.PORT
 
 const Posts = require('./data/db')
 const postsRouter = require('./posts/posts-router')
